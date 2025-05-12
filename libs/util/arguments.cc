@@ -65,8 +65,7 @@ Arguments::add_option (char shortname, std::string const& longname,
 /* ---------------------------------------------------------------- */
 
 void
-Arguments::parse (int argc, char const* const* argv)
-    throw(util::Exception)
+Arguments::parse (int argc, char const* const* argv) noexcept
 {
     std::vector<std::string> args;
     for (int i = 0; i < argc; ++i)
@@ -77,8 +76,7 @@ Arguments::parse (int argc, char const* const* argv)
 /* ---------------------------------------------------------------- */
 
 void
-Arguments::parse (std::vector<std::string> const& args)
-    throw(util::Exception)
+Arguments::parse (std::vector<std::string> const& args) noexcept
 {
     try
     {
